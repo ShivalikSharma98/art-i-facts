@@ -1,30 +1,37 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Button, Card, CardImg } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 function Results({ images }) {
 	if (!images.length) {
-		return <h2>No Images Found</h2>;
+		return <h2>Loading ...</h2>;
 	}
 	return (
 		<div className='gallery'>
 			{images
 				.filter((image) => {
-					if (image?.images[0]?.baseimageurl) {
+					if (image?.images[0]?.baseimageurl && image?.description) {
 						return true;
 					} else {
 						return false;
 					}
 				})
 				.map((image) => (
-					<div key={image.id} className='art-image'>
-						<h2>{image.title}</h2>
-						<h5>{image.people[0]?.name}</h5>
-						<img
-							src={image?.images[0]?.baseimageurl}
-							alt={image?.images[0]?.alttext}
+					<Card key={image.id} style={{ width: '18rem' }}>
+						<CardImg
+							variant='top'
+							src={image.images[0]?.baseimageurl}
+							alt={image.images[0]?.alttext}
 						/>
-						<p>{image.description}</p>
-					</div>
+						<Card.Body>
+							<Card.Title>{image.title}</Card.Title>
+                            <LinkContainer to={`/results/${image.id}`}>
+                                <Button variant='primary'>
+                                    Details
+                                </Button>
+                            </LinkContainer>
+						</Card.Body>
+					</Card>
 				))}
 		</div>
 	);

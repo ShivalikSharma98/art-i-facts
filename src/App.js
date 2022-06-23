@@ -1,5 +1,6 @@
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Results from './Components/Results/Results';
@@ -22,7 +23,7 @@ function App() {
 
 	const searchOptions = {
 		key: process.env.REACT_APP_API_KEY,
-		size: 20,
+		size: 500,
 		api: 'https://api.harvardartmuseums.org/object',
 	};
 
@@ -59,8 +60,12 @@ function App() {
 				<Container>
 					<Navbar.Brand href='/'>Art(i)facts</Navbar.Brand>
 					<Nav>
-						<Nav.Link href='/'>Home</Nav.Link>
-						<Nav.Link href='/about'>About</Nav.Link>
+						<LinkContainer to='/'>
+							<Nav.Link>Home</Nav.Link>
+						</LinkContainer>
+						<LinkContainer to='/about'>
+							<Nav.Link>About</Nav.Link>
+						</LinkContainer>
 					</Nav>
 					<Form className='d-flex' onSubmit={handleSubmit}>
 						{/* <FloatingLabel
