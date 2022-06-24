@@ -10,7 +10,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Button, Container, Form, FormControl, Nav } from 'react-bootstrap';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ReactDOM from 'react-dom';
+import { TypeWriter } from 'react-typewriter';
 
 function App() {
 	let navigate = useNavigate();
@@ -33,7 +33,7 @@ function App() {
 		event.preventDefault();
 		getImages(search);
 		navigate(`/results`);
-		document.getElementById('form-input').value = "";
+		document.getElementById('form-input').value = '';
 	}
 
 	function getImages(search) {
@@ -53,19 +53,17 @@ function App() {
 			<Navbar className='navbar navbar-custom'>
 				<Container>
 					<LinkContainer to='/'>
-						<Navbar.Brand className='navbar-brand'>Art(i)facts</Navbar.Brand>
+						<Navbar.Brand id='navbar-brand'>Art(i)facts</Navbar.Brand>
 					</LinkContainer>
 					<Nav>
 						<LinkContainer to='/'>
-							<Nav.Link className='navbar-text'>Home</Nav.Link>
+							<Nav.Link id='navbar-text'>Home</Nav.Link>
 						</LinkContainer>
 						<LinkContainer to='/about'>
-							<Nav.Link>About</Nav.Link>
+							<Nav.Link id='navbar-text'>About</Nav.Link>
 						</LinkContainer>
 					</Nav>
-					<Form
-						className='d-flex'
-						onSubmit={handleSubmit}>
+					<Form className='d-flex' onSubmit={handleSubmit}>
 						{/* <FloatingLabel
 							controlId='floatingInput'
 							label='Search'
@@ -79,7 +77,7 @@ function App() {
 							onChange={handleChange}
 						/>
 						{/* </FloatingLabel> */}
-						<Button type='submit' variant='outline-success'>
+						<Button id='button' type='submit'>
 							Search
 						</Button>
 					</Form>

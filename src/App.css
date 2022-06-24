@@ -2,5 +2,16 @@
     box-sizing: border-box;
 }
 .navbar {
-    background-color: maroon;
+    background-color: firebrick;
+}
+#navbar-brand {
+    color: white;
+    font-weight: 700;
+}
+#navbar-text {
+    color: white;
+}
+#button {
+    color: white;
+    background-color: #0d6efd;
 }

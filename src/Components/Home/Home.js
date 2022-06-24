@@ -1,4 +1,6 @@
 import React from 'react';
+import { TypeWriter } from 'react-typewriter';
+import './Home.css'
 
 function Home() {
     return (
