@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Card, CardImg } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import './Results.css'
 
 function Results({ images }) {
 	if (!images.length) {
-		return <h2>Loading ...</h2>;
+		return <h3>Loading...</h3>;
 	}
 	return (
 		<div className='gallery'>
