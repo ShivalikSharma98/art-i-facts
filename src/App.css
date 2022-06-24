@@ -1,17 +1,22 @@
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 .navbar {
-    background-color: firebrick;
+	background-color: firebrick;
+	/* position: fixed;
+	top: 0;
+	width: 100%; */
 }
 #navbar-brand {
-    color: white;
-    font-weight: 700;
+	color: white;
+	font-weight: 700;
 }
 #navbar-text {
-    color: white;
+	color: white;
 }
 #button {
-    color: white;
-    background-color: #0d6efd;
+	color: white;
+	background-color: #0d6efd;
 }

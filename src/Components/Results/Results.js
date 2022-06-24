@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Card, CardImg } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import './Results.css'
+import './Results.css';
 
 function Results({ images }) {
 	if (!images.length) {
@@ -26,11 +26,9 @@ function Results({ images }) {
 						/>
 						<Card.Body>
 							<Card.Title>{image.title}</Card.Title>
-                            <LinkContainer to={`/results/${image.id}`}>
-                                <Button variant='primary'>
-                                    Details
-                                </Button>
-                            </LinkContainer>
+							<LinkContainer to={`/results/${image.id}`}>
+								<Button variant='primary'>Details</Button>
+							</LinkContainer>
 						</Card.Body>
 					</Card>
 				))}

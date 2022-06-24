@@ -1,15 +1,16 @@
 import React from 'react';
+import './About.css';
 
 function About() {
 	return (
-		<div>
+		<div className='about-container'>
 			<h2>About</h2>
 			<p>
-				Art(i)facts is a quick, and easy to use library web
-				application for historical and modern day art. The application was built using Harvard Art
-				Museum's REST-style API which provides the most up to date information
-				on all kinds of pieces, ranging from modern day Abstract Expressionist
-				Paintings to 6,000 year old East Asian Ceramics.
+				Art(i)facts is a quick, and easy to use library web application for
+				historical and modern art. The application was built using Harvard
+				Art Museum's REST-style API which provides the most up to date
+				information on many pieces, ranging from modern day Abstract
+				Expressionist Paintings to 6,000 year old East Asian Ceramics.
 				<br />
 				<br />
 				The application uses a visitor provided keyword search parameter to sift
@@ -19,6 +20,10 @@ function About() {
 				can simply click on a card which prompts them to a page containing more
 				information.
 			</p>
+			<img
+				src='https://harvardartmuseums.org/assets/icons/fb-og-image-400x400.png'
+				alt='Harvard Art Museum Logo'
+			/>
 		</div>
 	);
 }

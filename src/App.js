@@ -10,7 +10,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Button, Container, Form, FormControl, Nav } from 'react-bootstrap';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TypeWriter } from 'react-typewriter';
 
 function App() {
 	let navigate = useNavigate();
@@ -84,6 +83,7 @@ function App() {
 				</Container>
 			</Navbar>
 			<main>
+
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/about' element={<About />} />
